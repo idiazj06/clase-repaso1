@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    height: 100vh;
+    background-color: #516dff;
+    text-align:center;
+    margin: 0;
+    overflow: hidden;
+}
+
 .screen{
     display: flex;
     flex-direction: column;
@@ -105,4 +120,23 @@ h1{
 .message.visible{
     opacity: 1;
     transform:translate(-50%, 150%);
+}
+
+.insect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught{
+    transform: translate(-50%,-50%) scale(0);
+}
+
+.insect img{
+    width: 300px;
+    height: 100px;
 }

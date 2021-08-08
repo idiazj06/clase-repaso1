@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,56 @@
     <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Hola mundo</p>
+    <div class="screen up">
+        <h1>Atrapa el insecto</h1>
+        <button class="btn" id="btn-inicio">
+            Iniciar
+        </button>
+    </div>
+    <div class="screen">
+        <h1>¿Cual es tu insecto favorito?</h1>
+        <ul class="insect-list">
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Mosca</p>
+                    <img src="https://pngimg.com/uploads/fly/fly_PNG3957.png" alt="mosca">
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Mosca</p>
+                    <img src="https://pngimg.com/uploads/fly/fly_PNG3957.png" alt="mosca">
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Mosca</p>
+                    <img src="https://pngimg.com/uploads/fly/fly_PNG3957.png" alt="mosca">
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Mosca</p>
+                    <img src="https://pngimg.com/uploads/fly/fly_PNG3957.png" alt="mosca">
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="screen" id="game-container">
+        <h3 id="time" class="time">Time: 00:00</h3>
+        <h3 id="score" class="score">Score: 0</h3>
+        <a id="message" class="message visible">
+            Are you annnoyed yet? <br>
+            You are Playing an impossible game !!
+        </a>
+    </div>
+
+    <div class="insect">
+        <img src="https://pngimg.com/uploads/fly/fly_PNG3957.png" alt="mosca">
+    </div>
     <script src="./scripts/script.js"></script>
 </body>
+
 </html>
