@@ -53,7 +53,7 @@ h1 {
     margin-top: -100vh;
 }
 
-.insects-list {
+.cars-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -61,11 +61,11 @@ h1 {
     padding: 0;
 }
 
-.insects-list li {
+.cars-list li {
     margin: 10px;
 }
 
-.choose-insect-btn {
+.choose-car-btn {
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
@@ -75,16 +75,16 @@ h1 {
     height: 150px;
 }
 
-.choose-insect-btn:hover {
+.choose-car-btn:hover {
     background-color: #fff;
     color: #516dff;
 }
 
-.choose-insect-btn:active {
+.choose-car-btn:active {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.choose-insect-btn img {
+.choose-car-btn img {
     width: 100px;
     height: 100px;
     object-fit: contain;
@@ -128,7 +128,7 @@ h1 {
     opacity: 1;
 }
 
-.insect {
+.car {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -140,11 +140,11 @@ h1 {
     transition: transform 0.3s ease-in-out;
 }
 
-.insect.caught {
+.car.caught {
     transform: translate(-50%, -50%) scale(0);
 }
 
-.insect img {
+.car img {
     width: 100px;
     height: 100px;
 }
