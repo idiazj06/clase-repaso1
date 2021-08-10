@@ -1,5 +1,5 @@
 const screens = document.querySelectorAll('.screen');
-const choose_insect_btns = document.querySelectorAll('.choose-insect-btn');
+const choose_car_btns = document.querySelectorAll('.choose-car-btn');
 const start_btn = document.getElementById('start-btn');
 const game_container = document.getElementById('game-container');
 
@@ -8,18 +8,18 @@ const scoreEl = document.getElementById('score');
 const message = document.getElementById('message');
 let seconds = 0;
 let score = 0;
-let selected_insect = {};
+let selected_car = {};
 
 start_btn.addEventListener('click', () => screens[0].classList.add('up'));
 
-choose_insect_btns.forEach((btn) => {
+choose_car_btns.forEach((btn) => {
     btn.addEventListener('click', () => {
         const img = btn.querySelector('img');
         const src = img.getAttribute('src');
         const alt = img.getAttribute('alt');
-        selected_insect = { src, alt };
+        selected_car = { src, alt };
         screens[1].classList.add('up');
-        setTimeout(createInsect, 1000);
+        setTimeout(createcar, 1000);
         startGame();
     });
 });
@@ -37,19 +37,19 @@ function increaseTime() {
     seconds++;
 }
 
-function createInsect() {
-    const insect = document.createElement('div');
-    insect.classList.add('insect');
+function createcar() {
+    const car = document.createElement('div');
+    car.classList.add('car');
     const { x, y } = getRandomLocation();
-    insect.style.top = `${y}px`;
-    insect.style.left = `${x}px`;
-    insect.innerHTML = `<img src="${selected_insect.src}" alt="${
-        selected_insect.alt
+    car.style.top = `${y}px`;
+    car.style.left = `${x}px`;
+    car.innerHTML = `<img src="${selected_car.src}" alt="${
+        selected_car.alt
     }" style="transform: rotate(${Math.random() * 360}deg)" />`;
 
-    insect.addEventListener('click', catchInsect);
+    car.addEventListener('click', catchcar);
 
-    game_container.appendChild(insect);
+    game_container.appendChild(car);
 }
 
 function getRandomLocation() {
@@ -60,16 +60,16 @@ function getRandomLocation() {
     return { x, y };
 }
 
-function catchInsect() {
+function catchcar() {
     increaseScore();
     this.classList.add('caught');
     setTimeout(() => this.remove(), 2000);
-    addInsects();
+    addcars();
 }
 
-function addInsects() {
-    setTimeout(createInsect, 1000);
-    setTimeout(createInsect, 1500);
+function addcars() {
+    setTimeout(createcar, 1000);
+    setTimeout(createcar, 1500);
 }
 
 function increaseScore() {
